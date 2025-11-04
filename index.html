@@ -57,6 +57,191 @@
             box-shadow: 0 0 40px 20px rgba(255, 221, 0, 0.6);
             animation: pulse 4s infinite alternate;
         }
+
+        /* Clouds */
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.9;
+        }
+        
+        .cloud-1 {
+            width: 120px;
+            height: 40px;
+            top: 80px;
+            left: 100px;
+            box-shadow: 
+                20px 10px 0 0 white,
+                40px 0px 0 0 white;
+            animation: float 20s infinite linear;
+        }
+        
+        .cloud-2 {
+            width: 150px;
+            height: 50px;
+            top: 120px;
+            right: 150px;
+            box-shadow: 
+                25px 15px 0 0 white,
+                50px 0px 0 0 white;
+            animation: float 25s infinite linear reverse;
+        }
+        
+        .cloud-3 {
+            width: 100px;
+            height: 30px;
+            top: 160px;
+            left: 300px;
+            box-shadow: 
+                15px 8px 0 0 white,
+                30px 0px 0 0 white;
+            animation: float 18s infinite linear;
+        }
+
+        /* Mountains */
+        .mountain {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        
+        .mountain-1 {
+            left: 0;
+            border-width: 0 200px 180px 0;
+            border-color: transparent #2c5530 transparent transparent;
+        }
+        
+        .mountain-2 {
+            left: 150px;
+            border-width: 0 250px 220px 0;
+            border-color: transparent #3a7d34 transparent transparent;
+        }
+        
+        .mountain-3 {
+            right: 150px;
+            border-width: 0 0 200px 250px;
+            border-color: transparent transparent transparent #2c5530;
+        }
+        
+        .mountain-4 {
+            right: 0;
+            border-width: 0 0 170px 200px;
+            border-color: transparent transparent transparent #3a7d34;
+        }
+        
+        /* Foreground */
+        .foreground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(to bottom, #3a7d34, #2c5530);
+        }
+        
+        /* Trees */
+        .tree {
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .tree-trunk {
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 40px;
+            background: #5d4037;
+        }
+        
+        .tree-top {
+            position: absolute;
+            bottom: 30px;
+            left: -20px;
+            width: 50px;
+            height: 60px;
+            background: #388e3c;
+            border-radius: 50% 50% 0 0;
+        }
+        
+        .tree-1 { left: 100px; }
+        .tree-2 { left: 200px; }
+        .tree-3 { left: 350px; }
+        .tree-4 { right: 150px; }
+        .tree-5 { right: 250px; }
+        .tree-6 { right: 400px; }
+        
+        /* Water reflection */
+        .water {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(to top, rgba(26, 35, 126, 0.4), rgba(38, 208, 206, 0.2));
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Birds */
+        .bird {
+            position: absolute;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 24px;
+        }
+        
+        .bird-1 {
+            top: 180px;
+            left: 200px;
+            animation: fly 15s infinite linear;
+        }
+        
+        .bird-2 {
+            top: 220px;
+            left: 400px;
+            animation: fly 18s infinite linear;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(900px); }
+        }
+        
+        @keyframes fly {
+            0% { transform: translateX(-50px); }
+            100% { transform: translateX(850px); }
+        }
+        
+        /* Title */
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Info box */
+        .info {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
